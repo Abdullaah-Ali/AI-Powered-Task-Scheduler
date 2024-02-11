@@ -1,0 +1,969 @@
+.vector-03 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+  }
+  .depth-7-frame-010 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 13.3px;
+    height: 13.3px;
+    display: none;
+  }
+  .depth-6-frame-017 {
+    width: 16px;
+    height: 16px;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .depth-5-frame-011 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .mingle {
+    position: relative;
+    letter-spacing: -0.27px;
+    line-height: 22.5px;
+    white-space: nowrap;
+  }
+  .depth-6-frame-018 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .depth-5-frame-13 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .depth-4-frame-02 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+  }
+  .depth-3-frame-01 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .home {
+    position: relative;
+    line-height: 21px;
+    font-weight: 500;
+  }
+  .depth-6-frame-019 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .depth-5-frame-012 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .discover {
+    position: relative;
+    line-height: 21px;
+    font-weight: 500;
+  }
+  .depth-6-frame-020 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .depth-5-frame-14 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0px 1px 0px 0px;
+  }
+  .create {
+    position: relative;
+    line-height: 21px;
+    font-weight: 500;
+  }
+  .depth-6-frame-021 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .depth-5-frame-22 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0px 1px 0px 0px;
+  }
+  .chat {
+    position: relative;
+    line-height: 21px;
+    font-weight: 500;
+  }
+  .depth-6-frame-022 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .depth-5-frame-31 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .depth-4-frame-03 {
+    align-self: stretch;
+    width: 290.4px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .vector-vector-icon {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+  }
+  .depth-8-frame-05 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 15px;
+    height: 16.2px;
+    display: none;
+  }
+  .depth-7-frame-011 {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .depth-6-frame-023 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .depth-5-frame-013 {
+    border-radius: 12px;
+    background-color: #f5f0f2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  }
+  .vector-04 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+  }
+  .depth-8-frame-06 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 16.3px;
+    height: 16.3px;
+    display: none;
+  }
+  .depth-7-frame-012 {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .depth-6-frame-024 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .depth-5-frame-15 {
+    border-radius: 12px;
+    background-color: #f5f0f2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  }
+  .depth-4-frame-12 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 8px;
+  }
+  .depth-4-frame-22 {
+    height: 40px;
+    width: 40px;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    flex-shrink: 0;
+    object-fit: cover;
+    min-height: 40px;
+  }
+  .depth-3-frame-11 {
+    height: 40px;
+    width: 1109.6px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-end;
+    gap: 32px;
+    max-width: 100%;
+    font-size: 14px;
+  }
+  .depth-2-frame-01 {
+    align-self: stretch;
+    border-bottom: 1px solid #e6e8eb;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 40px;
+    gap: 0px;
+    top: 0;
+    row-gap: 20px;
+    z-index: 99;
+    position: sticky;
+    max-width: 100%;
+    text-align: left;
+    font-size: 18px;
+    color: #171212;
+    font-family: "Be Vietnam Pro";
+  }
+  .create-your-profile {
+    margin: 0;
+    position: relative;
+    font-size: inherit;
+    letter-spacing: -0.8px;
+    line-height: 40px;
+    font-weight: 700;
+    font-family: inherit;
+  }
+  .depth-7-frame-013 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .depth-6-frame-025 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0px 1px 0px 0px;
+  }
+  .depth-5-frame-014 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .tell-us-more {
+    align-self: stretch;
+    position: relative;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .name-frame {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 20px;
+    max-width: 100%;
+  }
+  .profile-frame {
+    width: 489px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0px 16px;
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+  .name {
+    align-self: stretch;
+    position: relative;
+    line-height: 24px;
+    font-weight: 500;
+  }
+  .depth-7-frame-014 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0px 0px 8px;
+  }
+  .your-name {
+    position: relative;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: "Be Vietnam Pro";
+    color: #876370;
+    text-align: left;
+  }
+  .depth-10-frame-04 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .depth-9-frame-03 {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .depth-8-frame-07 {
+    flex: 1;
+    border-radius: 12px;
+    background-color: #f5f0f2;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 16px;
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+  .depth-7-frame-1 {
+    cursor: pointer;
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    max-width: 100%;
+  }
+  .depth-6-frame-026 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: 100%;
+  }
+  .depth-5-frame-015 {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-start;
+    max-width: 100%;
+  }
+  .depth-4-frame-23 {
+    width: 512px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 12px 16px;
+    box-sizing: border-box;
+  }
+  .email {
+    align-self: stretch;
+    position: relative;
+    line-height: 24px;
+    font-weight: 500;
+  }
+  .depth-7-frame-015 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0px 0px 8px;
+  }
+  .your-email {
+    position: relative;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: "Be Vietnam Pro";
+    color: #876370;
+    text-align: left;
+  }
+  .depth-10-frame-05 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .depth-9-frame-04 {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .depth-8-frame-08 {
+    flex: 1;
+    border-radius: 12px;
+    background-color: #f5f0f2;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 16px;
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+  .depth-7-frame-11 {
+    cursor: pointer;
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    max-width: 100%;
+  }
+  .depth-6-frame-027 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: 100%;
+  }
+  .depth-5-frame-016 {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-start;
+    max-width: 100%;
+  }
+  .depth-4-frame-31 {
+    width: 512px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 12px 16px;
+    box-sizing: border-box;
+  }
+  .occupation {
+    align-self: stretch;
+    position: relative;
+    line-height: 24px;
+    font-weight: 500;
+  }
+  .depth-7-frame-016 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0px 0px 8px;
+  }
+  .your-occupation {
+    position: relative;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: "Be Vietnam Pro";
+    color: #876370;
+    text-align: left;
+  }
+  .depth-10-frame-06 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .depth-9-frame-05 {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .depth-8-frame-09 {
+    flex: 1;
+    border-radius: 12px;
+    background-color: #f5f0f2;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 16px;
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+  .depth-7-frame-12 {
+    cursor: pointer;
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    max-width: 100%;
+  }
+  .depth-6-frame-028 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: 100%;
+  }
+  .depth-5-frame-017 {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-start;
+    max-width: 100%;
+  }
+  .depth-4-frame-41 {
+    width: 512px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 12px 16px;
+    box-sizing: border-box;
+  }
+  .date-of-birth {
+    position: relative;
+    letter-spacing: -0.27px;
+    line-height: 22.5px;
+  }
+  .depth-6-frame-029 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .depth-5-frame-018 {
+    height: 23px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0px 1px 0px 0px;
+    box-sizing: border-box;
+  }
+  .depth-4-frame-51 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 16px 16px 8px;
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+  .youremail-frame {
+    width: 512px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0px 0px 13px;
+    box-sizing: border-box;
+    font-size: 18px;
+  }
+  .january-1-2000 {
+    position: relative;
+    line-height: 24px;
+    font-weight: 500;
+  }
+  .depth-8-frame-010 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .depth-7-frame-017 {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .your-date-of {
+    position: relative;
+    line-height: 21px;
+  }
+  .depth-8-frame-011 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .depth-7-frame-13 {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0px 1px 0px 0px;
+    font-size: 14px;
+    color: #876370;
+  }
+  .depth-6-frame-030 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .depth-5-frame-019 {
+    width: 280.5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .vector-05 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+  }
+  .depth-9-frame-06 {
+    position: absolute;
+    top: -1076.5px;
+    left: -1366px;
+    width: 9px;
+    height: 17px;
+    display: none;
+  }
+  .depth-8-frame-012 {
+    width: 24px;
+    height: 24px;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .depth-7-frame-018 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0px 2px;
+  }
+  .depth-6-frame-031 {
+    height: 28px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .depth-5-frame-16 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .january-depth {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 16px 0px 15px;
+    gap: 20px;
+  }
+  .age {
+    position: relative;
+    letter-spacing: -0.27px;
+    line-height: 22.5px;
+  }
+  .depth-6-frame-032 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .depth-5-frame-020 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0px 1px 0px 0px;
+  }
+  .depth-4-frame-71 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 16px 16px 8px;
+    font-size: 18px;
+  }
+  .text-block {
+    position: relative;
+    line-height: 24px;
+    font-weight: 500;
+  }
+  .depth-8-frame-013 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .depth-7-frame-019 {
+    align-self: stretch;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0px 1px 0px 0px;
+  }
+  .your-age {
+    position: relative;
+    line-height: 21px;
+  }
+  .depth-8-frame-014 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .depth-7-frame-14 {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-size: 14px;
+    color: #876370;
+  }
+  .depth-6-frame-033 {
+    width: 59.7px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .depth-5-frame-021 {
+    width: 247.9px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .vector-06 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+  }
+  .depth-9-frame-07 {
+    position: absolute;
+    top: -1195px;
+    left: -1366px;
+    width: 9px;
+    height: 17px;
+    display: none;
+  }
+  .depth-8-frame-015 {
+    width: 24px;
+    height: 24px;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .depth-7-frame-020 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0px 2px;
+  }
+  .depth-6-frame-034 {
+    height: 28px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .depth-5-frame-17 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .january-depth1 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 16px;
+    gap: 20px;
+  }
+  .next {
+    position: relative;
+    font-size: 16px;
+    letter-spacing: 0.24px;
+    line-height: 24px;
+    font-family: "Be Vietnam Pro";
+    color: #fff;
+    text-align: left;
+  }
+  .depth-7-frame-021 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .depth-6-frame-035 {
+    background-color: #e61a5e;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .depth-5-frame-022 {
+    cursor: pointer;
+    border: none;
+    padding: 2px 126px;
+    background-color: #e61a5e;
+    align-self: stretch;
+    flex: 1;
+    border-radius: 36px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+  .depth-4-frame-9 {
+    align-self: stretch;
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 47px -15.01px;
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+  .frame-depth-bg {
+    width: 512px;
+    height: 251px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 14px;
+  }
+  .depth-4-frame-2-parent {
+    width: 512px;
+    overflow-x: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: 100%;
+    font-size: 16px;
+  }
+  .frame-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0px 20px;
+    box-sizing: border-box;
+    gap: 36px;
+    max-width: 100%;
+    flex-shrink: 0;
+  }
+  .galileo-design1 {
+    width: 100%;
+    position: relative;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0px 0px 40px;
+    box-sizing: border-box;
+    gap: 56px;
+    letter-spacing: normal;
+    text-align: left;
+    font-size: 32px;
+    color: #171212;
+    font-family: "Be Vietnam Pro";
+  }
+  
+  @media screen and (max-width: 750px) {
+    .create-your-profile {
+      font-size: 26px;
+      line-height: 32px;
+    }
+  }
+  @media screen and (max-width: 675px) {
+    .depth-3-frame-11 {
+      gap: 32px;
+    }
+  
+    .frame-container {
+      gap: 36px;
+    }
+  
+    .galileo-design1 {
+      gap: 56px;
+    }
+  }
+  @media screen and (max-width: 450px) {
+    .create-your-profile {
+      font-size: 19px;
+      line-height: 24px;
+    }
+  }
+
+
+  
+  
