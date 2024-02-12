@@ -10,12 +10,16 @@ const ProfileRouter = require('./routes/profile')
 const path = require('path');
 
 
+
 app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'routes', 'static')));
 
+app.set('view engine', 'ejs'); // Use 'set' method to set the view engine
+app.set('views', path.join(__dirname, 'routes', 'template'));
 
+// Use 'set' method to set the views directory
 mongoose.set('strictQuery', false);
 
 const { router: loginRouter, authenticateToken } = require('./routes/login');
@@ -27,6 +31,7 @@ app.use('/profile', ProfileRouter);
 
 app.get('/home', authenticateToken, (req, res) => {
     res.json({ message: 'Welcome to the home page!', user: req.user });
+    
 });
 
 const start = async () => {
