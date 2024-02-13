@@ -7,6 +7,7 @@ const signupRoute = require('./routes/signup');
 const logoutRoute = require('./routes/logout');
 const cookieParser = require('cookie-parser');
 const ProfileRouter = require('./routes/profile')
+const TaskRouter = require('./routes/task')
 const path = require('path');
 
 
@@ -28,6 +29,7 @@ app.use('/login', loginRouter);
 app.use('/signup', signupRoute);
 app.use('/logout', logoutRoute);
 app.use('/profile', ProfileRouter);
+app.use('/home/task',TaskRouter);
 
 app.get('/home', authenticateToken, (req, res) => {
     res.json({ message: 'Welcome to the home page!', user: req.user });
