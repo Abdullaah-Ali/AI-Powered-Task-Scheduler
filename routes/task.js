@@ -7,10 +7,36 @@ const jwt = require('jsonwebtoken');
 const { authenticateToken } = require('./login');
 
 
-router.get('/', (req, res) => {
-    res.render(path.join(__dirname, 'template', 'task.ejs'));
-    //display the ejs extension of the task page
+
+const taskschema = new mongoose.Schema({
+    projectName:{
+        type:String,
+        required:true
+    },
+    description:{
+        type:String,
+        required:true,
+    },
+    duedate:{
+        type:Date,
+        required:true
+    }
+    ,
+    priority:{
+        type:String,
+        required:true
+    }
+
+})
+
+const UserTasks = mongoose.model('UserTasks', taskschema);
+
+router.get('/', authenticateToken,  (req, res) => {
+        res.render(path.join(__dirname, 'template', 'task.ejs'));
+    
+    
 }); 
+    
 
 
 

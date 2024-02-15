@@ -122,11 +122,18 @@
       <div id="custom-dropdown-menu" class="custom-dropdown-menu">
         <form class="dropdown-form">
           <label for="project-name">Project/Work Name:</label>
-          <input type="text" id="project-name" name="project-name" required>
+          <input type="text" id="project-name" name="project-name" placeholder="Your Project/Task Name" required>
           <label for="description">Description:</label>
           <textarea id="description" name="description" rows="4" required></textarea>
           <label for="due-date">Due Date:</label>
           <input type="date" id="due-date" name="due-date" required>
+          <label for="priority">Priority:</label>
+          <select id="priority" name="priority" required>
+            <option value="high">High</option>
+            <option value="medium">Medium</option>
+            <option value="low">Low</option>
+          </select>
+          
           <button type="submit">Create Task</button>
         </form>
       </div>    
@@ -234,7 +241,7 @@
                 <div class="depth-5-frame-04">
                   <div class="depth-6-frame-07">
                     <div class="depth-9-frame-01">
-                      <b class="my-tasks">My Tasks</b>
+                      <b class="my-tasks">Abdullah's Project</b>
                     </div>
                   </div>
                 </div>
