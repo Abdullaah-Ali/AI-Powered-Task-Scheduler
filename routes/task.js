@@ -73,7 +73,6 @@ router.route('/')
             );
             res.redirect('/home/task');
 
-
             //res.json(updatedTask);
         } else {
             // Task does not exist, create a new task

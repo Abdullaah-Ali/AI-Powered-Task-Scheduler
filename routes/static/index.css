@@ -857,3 +857,33 @@
     font-family: var(--font-manrope);
   }
   
+  /* Add CSS for edit and delete buttons */
+.task-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  .edit-task,
+  .delete-task {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .edit-task {
+    background-color: #4CAF50; /* Green */
+    color: white;
+  }
+  
+  .delete-task {
+    background-color: #f44336; /* Red */
+    color: white;
+  }
+  
+  .edit-task:hover,
+  .delete-task:hover {
+    opacity: 0.8;
+  }
+  

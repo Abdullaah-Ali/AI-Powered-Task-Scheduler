@@ -90,6 +90,7 @@
                     <div class="depth-9-frame-01">
                       <button class="dropdown-toggle">Create New Task</button>
                       <!-- Dropdown Menu -->
+                      
                       <div id="custom-dropdown-menu" class="custom-dropdown-menu">
                         <form id="task-form" class="dropdown-form" method="POST">
                             <label for="project-name">Project/Work Name:</label>
@@ -107,6 +108,7 @@
                           <button type="submit">Create Task</button>
                         </form>
                       </div>
+                      
                       <!-- End Dropdown Menu -->
                     </div>
                   </div>
@@ -239,7 +241,9 @@
             <div class="depth-7-frame-012">
               <div class="depth-9-frame-01">
                 <div class="finalize-copy-for">${task.projectName}</div>
-              </div>
+              
+                </div>
+
             </div>
             <div class="depth-7-frame-11">
               <div class="depth-9-frame-01">
@@ -259,6 +263,12 @@
           </div>
         </div>
       </div>
+      <div class="task-actions">
+        <button class="edit-task" data-task-id="${task._id}">Edit</button>
+        <button class="delete-task" data-task-id="${task._id}">Delete</button>
+      </div>
+    </div>
+
     `;
 }
 
@@ -271,7 +281,45 @@
       container.insertAdjacentHTML('beforeend', taskHTML);
     });
   }
+ 
+  
+  
+//using theses two container to fetch the task id thru the event listerns attach to the coed 
 
+const taskContainer = document.getElementById('task-container');
+taskContainer.addEventListener('click', event => {
+    if (event.target.classList.contains('edit-task')) {
+        const taskId = event.target.getAttribute('data-task-id');
+        console.log("Edit button clicked for Task ID:", taskId);
+        // Call function to handle editing task with taskId
+        editTask(taskId);
+    }
+});
+
+
+
+  // Function to handle deleting tasks
+  taskContainer.addEventListener('click', event => {
+    if (event.target.classList.contains('delete-task')) {
+        const taskIdDel = event.target.getAttribute('data-task-id');
+        console.log("Delete button clicked for Task ID:", taskIdDel);
+        // Call function to handle deleting task with taskId
+        deleteTask(taskIdDel);
+    }
+  });
+
+
+
+  function editTask(taskId) {
+    // Implement the logic to edit the task with the given taskId
+    console.log("Editing task with ID:", taskId);
+}
+
+// Function to handle deleting a task
+function deleteTask(taskIdDel) {
+    // Implement the logic to delete the task with the given taskId
+    console.log("Deleting task with ID:", taskIdDel);
+}
   // Call the function to display tasks with the data passed from the server
   const tasksData = JSON.parse(document.getElementById('task-container').getAttribute('data-tasks'));
   displayTasks(tasksData);
