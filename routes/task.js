@@ -20,8 +20,13 @@ const taskschema = new mongoose.Schema({
     duedate:{
         type:Date,
         required:true
-    }
-    ,
+    },
+    
+    usermail:{
+        type:String,
+        required:true
+    },
+
     priority:{
         type:String,
         required:true
@@ -35,7 +40,10 @@ const UserTasks = mongoose.model('UserTasks', taskschema);
 router.route('/')
 .get(authenticateToken, async (req, res) => {
     try {
-        res.render(path.join(__dirname, 'template', 'task.ejs'));
+        const userEmail = req.user.email; // Extract user email from JWT payload
+        const userTasks = await UserTasks.find({ usermail: userEmail });
+        res.render('task', { tasksData: JSON.stringify(userTasks) }); // Pass tasks data to the view
+        //console.log(userTasks)
     } catch (error) {
         console.error(error);
         res.status(500).send('Internal Server Error');
@@ -59,12 +67,14 @@ router.route('/')
             if (due_date) updateFields.duedate = due_date;
 
             const updatedTask = await UserTasks.findOneAndUpdate(
-                { userEmail },
+                { usermail },
                 updateFields,
                 { new: true }
             );
+            res.redirect('/home/task');
 
-            res.json(updatedTask);
+
+            //res.json(updatedTask);
         } else {
             // Task does not exist, create a new task
             const newTask = new UserTasks({
@@ -72,11 +82,11 @@ router.route('/')
                 priority: priority,
                 description: description,
                 duedate: due_date,
-                userEmail: userEmail // Associate the task with the user's email
+                usermail: userEmail // Associate the task with the user's email
             });
 
             const savedTask = await newTask.save();
-            res.json(savedTask);
+            res.redirect('/home/task');
         }
 
     } catch (error) {
@@ -84,5 +94,7 @@ router.route('/')
         res.status(500).send('Internal Server Error');
     }
 });
+
+
 
 module.exports = router;

@@ -91,8 +91,8 @@
                       <button class="dropdown-toggle">Create New Task</button>
                       <!-- Dropdown Menu -->
                       <div id="custom-dropdown-menu" class="custom-dropdown-menu">
-                        <form class="dropdown-form" action="/home/task" method="POST">
-                          <label for="project-name">Project/Work Name:</label>
+                        <form id="task-form" class="dropdown-form" method="POST">
+                            <label for="project-name">Project/Work Name:</label>
                           <input type="text" id="project-name" name="project_name" placeholder="Your Project/Task Name" required>
                           <label for="description">Description:</label>
                           <textarea id="description" name="description" rows="4" required></textarea>
@@ -200,8 +200,8 @@
               </div>
             </div>
             <!-- Dynamically inserted tasks start here -->
-            <div id="task-container">
-              <!-- Tasks will be inserted here -->
+            <div id="task-container" data-tasks="<%= tasksData %>">
+                <!-- Tasks will be inserted here -->
             </div>
             <!-- Dynamically inserted tasks end here -->
           </div>
@@ -209,53 +209,75 @@
       </div>
     </div>
   </div>
+<script>
+ document.addEventListener("DOMContentLoaded", function() {
+  // Function to dynamically generate HTML for each task
+  function formatDueDate(dueDate) {
+    const currentDate = new Date();
+    const tomorrow = new Date();
+    tomorrow.setDate(tomorrow.getDate() + 1); // Get tomorrow's date
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      // Sample task data to be extracted from the task.js to display
-      const tasks = [
-        { task: "Finalize copy for new homepage banner", timeline: "nigga" },
-              ];
+    const formattedDate = new Date(dueDate);
 
-      // Function to dynamically generate HTML for each task
-      function generateTaskHTML(task) {
-        return `
-          <div class="depth-4-frame-11">
-            <div class="depth-5-frame-05">
-              <div class="depth-6-frame-09">
-                <div class="depth-7-frame-012">
-                  <div class="depth-9-frame-01">
-                    <div class="finalize-copy-for">${task.task}</div>
-                  </div>
-                </div>
-                <div class="depth-7-frame-11">
-                  <div class="depth-9-frame-01">
-                    <div class="project-marketing-website">Project: Marketing website redesign</div>
-                  </div>
-                </div>
+    if (formattedDate.toDateString() === currentDate.toDateString()) {
+        return 'Today';
+    } else if (formattedDate.toDateString() === tomorrow.toDateString()) {
+        return 'Tomorrow';
+    } else {
+        // For other dates, you can customize the formatting as needed
+        return formattedDate.toDateString(); // Or any other desired format
+    }
+}
+
+  function generateTaskHTML(task) {
+    const formattedDueDate = formatDueDate(task.duedate);
+
+    return `
+      <div class="depth-4-frame-11">
+        <div class="depth-5-frame-05">
+          <div class="depth-6-frame-09">
+            <div class="depth-7-frame-012">
+              <div class="depth-9-frame-01">
+                <div class="finalize-copy-for">${task.projectName}</div>
               </div>
             </div>
-            <div class="depth-5-frame-13">
-              <div class="depth-6-frame-010">
-                <div class="tomorrow">${task.timeline}</div>
+            <div class="depth-7-frame-11">
+              <div class="depth-9-frame-01">
+                <div class="project-marketing-website">Description: ${task.description}</div>
+              </div>
+            </div>
+            <div class="depth-7-frame-11">
+              <div class="depth-9-frame-01">
+                <div class="project-marketing-website">Priority: ${task.priority}</div>
               </div>
             </div>
           </div>
-        `;
-      }
+        </div>
+        <div class="depth-5-frame-13">
+          <div class="depth-6-frame-010">
+            <div class="tomorrow">Due date : ${formattedDueDate}</div>
+          </div>
+        </div>
+      </div>
+    `;
+}
 
-      // Function to inject tasks into the container
-      function displayTasks() {
-        const container = document.getElementById('task-container');
-        tasks.forEach(task => {
-          const taskHTML = generateTaskHTML(task);
-          container.insertAdjacentHTML('beforeend', taskHTML);
-        });
-      }
-
-      // Call the function to display tasks
-      displayTasks();
+  // Function to display tasks
+  function displayTasks(tasks) {
+    const container = document.getElementById('task-container');
+    container.innerHTML = ''; // Clear the container before adding new tasks
+    tasks.forEach(task => {
+      const taskHTML = generateTaskHTML(task);
+      container.insertAdjacentHTML('beforeend', taskHTML);
     });
+  }
+
+  // Call the function to display tasks with the data passed from the server
+  const tasksData = JSON.parse(document.getElementById('task-container').getAttribute('data-tasks'));
+  displayTasks(tasksData);
+});
+
+  
     // Function to toggle visibility of dropdown menu when "Create a new task" button is clicked
 document.querySelector('.dropdown-toggle').addEventListener('click', function(event) {
   event.stopPropagation(); // Prevents the click event from bubbling up to the document body
