@@ -5,6 +5,8 @@ const mongoose = require('mongoose')
 const path = require('path');
 const jwt = require('jsonwebtoken');
 const { authenticateToken } = require('./login');
+const app = express();
+
 
 
 
@@ -92,8 +94,33 @@ router.route('/')
         console.error(error);
         res.status(500).send('Internal Server Error');
     }
+
+});
+router.put('/:id', async (req, res) => {
+    try {
+        const taskId = req.params.id;
+        console.log('Received task ID:', taskId);
+
+        const updatedTaskData = req.body;
+
+        // Update the task in the database
+        const updatedTask = await UserTasks.findByIdAndUpdate(taskId, updatedTaskData, { new: true });
+
+        if (!updatedTask) {
+            return res.status(404).json({ error: 'Task not found' });
+        }
+
+        // Send back the updated task data as the response
+        res.json(updatedTask);
+    } catch (error) {
+        console.error('Error updating task:', error);
+        res.status(500).json({ error: 'Failed to update task' });
+    }
 });
 
 
+
+
+    
 
 module.exports = router;

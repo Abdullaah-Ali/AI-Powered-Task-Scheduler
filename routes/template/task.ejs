@@ -309,11 +309,125 @@ taskContainer.addEventListener('click', event => {
   });
 
 
+  function findTaskById(tasksData, taskId) {
+    // Check if tasksData is defined and not empty
+    if (!tasksData || tasksData.length === 0) {
+        console.error('Tasks data is empty or undefined.');
+        return null;
+    }
 
-  function editTask(taskId) {
-    // Implement the logic to edit the task with the given taskId
-    console.log("Editing task with ID:", taskId);
+    // Find the task with the given taskId
+    const taskToUpdate = tasksData.find(task => task._id === taskId);
+    
+    // Check if taskToUpdate is found
+    if (!taskToUpdate) {
+        console.error(`Task with ID ${taskId} not found.`);
+        return null;
+    }
+    
+    return taskToUpdate;
 }
+
+
+
+function saveUpdatedTask(updatedTask) {
+    const url = `/home/task/${updatedTask._id}`;
+    const options = {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(updatedTask)
+    };
+    fetch(url, options)
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`Failed to update task. Server responded with status ${response.status}: ${response.statusText}`);
+        }
+        return response.json(); // Parse response body as JSON
+    })
+    .then(updatedTask => {
+        // Update the task on the page with the new data
+        updateTaskOnPage(updatedTask);
+        console.log('Task updated successfully.');
+    })
+    .catch(error => {
+        console.error('Error updating task:', error.message);
+    });
+}
+
+function updateTaskOnPage(updatedTask) {
+    // Find the existing task element on the page
+    const existingTaskElement = document.querySelector(`[data-task-id="${updatedTask._id}"]`);
+    if (!existingTaskElement) {
+        console.error(`Task element with ID ${updatedTask._id} not found.`);
+        return;
+    }
+
+    // Update the task element with the new data
+    existingTaskElement.innerHTML = generateTaskHTML(updatedTask);
+}
+
+
+function editTask(taskId) {
+    // Find the task to edit
+    // Find the task to edit
+    const taskToUpdate = findTaskById(tasksData, taskId);    
+    if (!taskToUpdate) {
+        console.error(`Task with ID ${taskId} not found.`);
+        return;
+    }
+
+
+    // Create the edit form
+    const editForm = document.createElement('form');
+    editForm.id = 'edit-form';
+    editForm.classList.add('edit-form');
+    
+    // Populate the edit form with task data
+    editForm.innerHTML = `
+        <label for="edit-project-name">Project/Work Name:</label>
+        <input type="text" id="edit-project-name" name="edit_project_name" value="${taskToUpdate.projectName}" required>
+        <label for="edit-description">Description:</label>
+        <textarea id="edit-description" name="edit_description" rows="4" required>${taskToUpdate.description}</textarea>
+        <label for="edit-due-date">Due Date:</label>
+        <input type="date" id="edit-due-date" name="edit_due_date" value="${taskToUpdate.dueDate}" required>
+        <label for="edit-priority">Priority:</label>
+        <select id="edit-priority" name="edit_priority" required>
+            <option value="high" ${taskToUpdate.priority === 'high' ? 'selected' : ''}>High</option>
+            <option value="medium" ${taskToUpdate.priority === 'medium' ? 'selected' : ''}>Medium</option>
+            <option value="low" ${taskToUpdate.priority === 'low' ? 'selected' : ''}>Low</option>
+        </select>
+        <button type="submit">Save Changes</button>
+    `;
+    
+    // Append the edit form to the document body
+    document.body.appendChild(editForm);
+    
+    // Add event listener for form submission
+    editForm.addEventListener('submit', event => {
+        event.preventDefault();
+        
+        // Retrieve updated values from the form fields
+        const updatedProjectName = editForm.querySelector('#edit-project-name').value;
+        const updatedDescription = editForm.querySelector('#edit-description').value;
+        const updatedDueDate = editForm.querySelector('#edit-due-date').value;
+        const updatedPriority = editForm.querySelector('#edit-priority').value;
+        
+        // Update the task with the new values
+        taskToUpdate.projectName = updatedProjectName;
+        taskToUpdate.description = updatedDescription;
+        taskToUpdate.dueDate = updatedDueDate;
+        taskToUpdate.priority = updatedPriority;
+        
+        // Save the updated task (e.g., send an AJAX request to update the task on the server)
+        saveUpdatedTask(taskToUpdate); // Implement this function to save the updated task
+        
+        // Remove the edit form from the document body
+        editForm.remove();
+    });
+}
+
 
 // Function to handle deleting a task
 function deleteTask(taskIdDel) {
